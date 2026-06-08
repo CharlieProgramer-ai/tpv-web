@@ -17,7 +17,10 @@ const {
   canonical,
 } = Astro.props;
 
-const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+const canonicalURL = canonical ??
+  (Astro.site
+    ? new URL(Astro.url.pathname, Astro.site).href
+    : Astro.url.pathname);
 ---
 
 <!doctype html>
