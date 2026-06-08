@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Aviso Legal — TPV Restaurante"
+  description="Aviso legal e información del responsable del sitio web TPV Restaurante."
+>
+  <Nav />
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-3xl font-bold text-slate-900 mb-8">Aviso Legal</h1>
+
+    <div class="space-y-6 text-slate-700">
+      <h2 class="text-xl font-semibold">Titular del sitio web</h2>
+      <p>
+        En cumplimiento del artículo 10 de la Ley 34/2002 de Servicios de la Sociedad
+        de la Información y del Comercio Electrónico (LSSI-CE), se informa:
+      </p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li><strong>Titular:</strong> [TU NOMBRE COMPLETO]</li>
+        <li><strong>NIF:</strong> [TU NIF]</li>
+        <li><strong>Domicilio:</strong> [TU DIRECCIÓN], Elche, Alicante</li>
+        <li><strong>Email:</strong> [TU EMAIL]</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold">Objeto y uso del sitio</h2>
+      <p>
+        Este sitio web tiene carácter informativo y comercial sobre el software TPV Restaurante.
+        El usuario se compromete a hacer un uso correcto del sitio conforme a la ley.
+      </p>
+
+      <h2 class="text-xl font-semibold">Propiedad intelectual</h2>
+      <p>
+        Los contenidos de este sitio (textos, imágenes, diseño) son propiedad del titular
+        y están protegidos por la legislación española e internacional sobre propiedad intelectual.
+      </p>
+
+      <h2 class="text-xl font-semibold">Limitación de responsabilidad</h2>
+      <p>
+        El titular no garantiza la ausencia de errores en los contenidos ni su actualización permanente.
+        Queda exonerado de cualquier responsabilidad derivada del uso del sitio.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</Layout>

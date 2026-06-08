@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Funcionalidades from '../components/Funcionalidades.astro';
+import Precio from '../components/Precio.astro';
+import Comparativa from '../components/Comparativa.astro';
+import Contacto from '../components/Contacto.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="TPV para restaurantes en Alicante — Desde 35 €/mes | TPV Restaurante"
+  description="Software TPV para restaurantes en Alicante con Carta QR, reservas online y Verifactu incluidos. Sin contratos. Instalación en tu local. Soporte directo."
+  canonical="https://tpv-restaurante.vercel.app/tpv-restaurante-alicante"
+>
+  <Nav />
+  <main>
+    <Hero ciudad="Alicante" />
+
+    <section class="bg-blue-50 py-10 px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-slate-700 text-lg">
+          Ofrecemos instalación y soporte presencial en <strong>Alicante y provincia</strong>.
+          Conocemos la hostelería local y estamos disponibles cuando nos necesites.
+        </p>
+      </div>
+    </section>
+
+    <Funcionalidades />
+    <Precio />
+    <Comparativa />
+    <Contacto />
+  </main>
+  <Footer />
+</Layout>

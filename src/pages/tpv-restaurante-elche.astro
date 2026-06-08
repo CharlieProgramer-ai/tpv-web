@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Funcionalidades from '../components/Funcionalidades.astro';
+import Precio from '../components/Precio.astro';
+import Comparativa from '../components/Comparativa.astro';
+import Contacto from '../components/Contacto.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="TPV para restaurantes en Elche — Desde 35 €/mes | TPV Restaurante"
+  description="Software TPV para restaurantes en Elche con Carta QR, reservas online y Verifactu incluidos. Sin contratos. Instalación en tu local. Soporte directo."
+  canonical="https://tpv-restaurante.vercel.app/tpv-restaurante-elche"
+>
+  <Nav />
+  <main>
+    <Hero ciudad="Elche" />
+
+    <section class="bg-blue-50 py-10 px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-slate-700 text-lg">
+          Con base en <strong>Elche</strong>, ofrecemos instalación presencial y soporte inmediato
+          para restaurantes, bares y cafeterías de la ciudad.
+        </p>
+      </div>
+    </section>
+
+    <Funcionalidades />
+    <Precio />
+    <Comparativa />
+    <Contacto />
+  </main>
+  <Footer />
+</Layout>
