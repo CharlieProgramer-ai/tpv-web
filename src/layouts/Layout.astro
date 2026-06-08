@@ -9,6 +9,7 @@ interface Props {
   ogImage?: string;
   canonical?: string;
   noindex?: boolean;
+  localBusiness?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   ogImage = '/og-default.png',
   canonical,
   noindex = false,
+  localBusiness = false,
 } = Astro.props;
 
 const canonicalURL = canonical ??
@@ -74,24 +76,26 @@ const canonicalURL = canonical ??
       }
     })} />
 
-    <!-- Schema.org LocalBusiness — rellena NAP real antes de lanzar -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "TPV Restaurante",
-      "description": "Software TPV para restaurantes en España. Carta QR, reservas online, KDS y Verifactu incluidos.",
-      "url": Astro.site ? Astro.site.href : "https://tpv-restaurante.vercel.app",
-      "telephone": "+34XXXXXXXXX",
-      "email": "TU_EMAIL@ejemplo.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Elche",
-        "addressRegion": "Alicante",
-        "addressCountry": "ES"
-      },
-      "areaServed": ["Alicante", "Elche", "Murcia", "España"],
-      "priceRange": "€€"
-    })} />
+    <!-- Schema.org LocalBusiness (solo home) — rellena NAP real antes de lanzar -->
+    {localBusiness && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TPV Restaurante",
+        "description": "Software TPV para restaurantes en España. Carta QR, reservas online, KDS y Verifactu incluidos.",
+        "url": Astro.site ? Astro.site.href : "https://tpv-restaurante.vercel.app",
+        "telephone": "+34XXXXXXXXX",
+        "email": "TU_EMAIL@ejemplo.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Elche",
+          "addressRegion": "Alicante",
+          "addressCountry": "ES"
+        },
+        "areaServed": ["Alicante", "Elche", "Murcia", "España"],
+        "priceRange": "€€"
+      })} />
+    )}
   </head>
   <body>
     <slot />
