@@ -1,0 +1,71 @@
+---
+// src/components/Contacto.astro
+// Reemplaza FORMSPREE_ID por el ID real de tu form en formspree.io
+const FORMSPREE_ID = 'FORMSPREE_ID';
+---
+
+<section id="contacto" class="bg-[#1e40af] py-20 px-4">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-white mb-4">¿Te interesa? Pide una demo gratuita</h2>
+      <p class="text-blue-200 text-lg">20 minutos por videollamada. Te enseño el TPV en directo. Sin compromiso.</p>
+    </div>
+
+    <form
+      action={`https://formspree.io/f/${FORMSPREE_ID}`}
+      method="POST"
+      class="bg-white rounded-2xl p-8 shadow-lg space-y-4"
+    >
+      <input type="hidden" name="_next" value="/gracias" />
+      <input type="hidden" name="_subject" value="Nueva solicitud de demo — TPV Restaurante" />
+
+      <div>
+        <label for="nombre" class="block text-sm font-semibold text-slate-700 mb-1">Tu nombre</label>
+        <input
+          id="nombre"
+          type="text"
+          name="nombre"
+          required
+          placeholder="Carlos García"
+          class="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1e40af] focus:border-transparent"
+        />
+      </div>
+
+      <div>
+        <label for="restaurante" class="block text-sm font-semibold text-slate-700 mb-1">Nombre del restaurante</label>
+        <input
+          id="restaurante"
+          type="text"
+          name="restaurante"
+          required
+          placeholder="Restaurante El Puerto"
+          class="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1e40af] focus:border-transparent"
+        />
+      </div>
+
+      <div>
+        <label for="telefono" class="block text-sm font-semibold text-slate-700 mb-1">Teléfono</label>
+        <input
+          id="telefono"
+          type="tel"
+          name="telefono"
+          required
+          placeholder="600 000 000"
+          class="w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1e40af] focus:border-transparent"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-[#1e40af] text-white font-semibold text-lg px-8 py-4 rounded-xl hover:bg-[#1e3a8a] transition-colors mt-2"
+      >
+        Solicitar demo gratuita
+      </button>
+
+      <p class="text-xs text-slate-400 text-center">
+        Sin spam. Tus datos solo se usan para contactarte sobre la demo.
+        <a href="/politica-privacidad" class="underline hover:text-slate-600">Política de privacidad</a>.
+      </p>
+    </form>
+  </div>
+</section>

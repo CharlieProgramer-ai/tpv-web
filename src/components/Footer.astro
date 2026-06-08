@@ -1,0 +1,20 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-slate-900 text-slate-400 py-10 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+    <div class="font-semibold text-white">TPV Restaurante</div>
+
+    <nav class="flex flex-wrap justify-center gap-6">
+      <a href="/#funcionalidades" class="hover:text-white transition-colors">Funcionalidades</a>
+      <a href="/#precio" class="hover:text-white transition-colors">Precio</a>
+      <a href="/#contacto" class="hover:text-white transition-colors">Contacto</a>
+      <a href="/aviso-legal" class="hover:text-white transition-colors">Aviso legal</a>
+      <a href="/politica-privacidad" class="hover:text-white transition-colors">Privacidad</a>
+    </nav>
+
+    <div class="text-xs">© {year} TPV Restaurante. Todos los derechos reservados.</div>
+  </div>
+</footer>
