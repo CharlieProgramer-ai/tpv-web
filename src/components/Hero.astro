@@ -6,8 +6,8 @@ interface Props {
 const { ciudad } = Astro.props;
 
 const titulo = ciudad
-  ? `El TPV completo para restaurantes en ${ciudad}`
-  : 'El TPV completo para tu restaurante. Sin contratos. Sin sorpresas.';
+  ? `El TPV completo para restaurantes en ${ciudad}, por 35 €/mes`
+  : 'Todo tu restaurante en un solo TPV. Por 35 €/mes, sin permanencia.';
 ---
 
 <section class="bg-white pt-16 pb-20 px-4">
@@ -22,8 +22,7 @@ const titulo = ciudad
     </h1>
 
     <p class="text-xl text-slate-500 mb-10 max-w-2xl mx-auto">
-      Carta QR, reservas online, KDS y Verifactu incluidos desde <strong class="text-slate-800">35&nbsp;€/mes</strong>.
-      Soporte directo, sin call centers.
+      Carta QR, reservas online, KDS de cocina y Verifactu, todo incluido sin módulos extra. Soporte directo de quien lo programa, no un call center.
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center">

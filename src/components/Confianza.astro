@@ -1,0 +1,46 @@
+---
+// src/components/Confianza.astro
+const puntos = [
+  {
+    titulo: 'Hablas con quien lo programa',
+    descripcion: 'Cuando algo falla en pleno servicio, me llamas directamente a mí. Nada de call centers ni tickets que tardan días.',
+  },
+  {
+    titulo: 'Funciona aunque se caiga el WiFi',
+    descripcion: 'El TPV es local: sigue cobrando y enviando comandas a cocina sin internet. Cuando vuelve la conexión, todo se sincroniza solo.',
+  },
+  {
+    titulo: 'Verifactu de serie, no un parche',
+    descripcion: 'Cumple la normativa fiscal española desde el primer día: huella encadenada, registro de facturas y QR conforme a la ley.',
+  },
+  {
+    titulo: 'Sin permanencia, de verdad',
+    descripcion: 'Pagas mes a mes. Si no te sirve, lo dejas. Sin contratos de 12 meses ni penalizaciones por marcharte.',
+  },
+];
+---
+
+<section class="bg-white py-20 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Por qué fiarte de este TPV</h2>
+      <p class="text-slate-500 text-lg max-w-2xl mx-auto">No somos una multinacional con un número de soporte que no coge nadie. Es software español, hecho para que tu restaurante no se pare nunca.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {puntos.map((p) => (
+        <div class="flex gap-4 items-start bg-slate-50 rounded-2xl p-6 border border-slate-100">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-[#1e40af] flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 text-lg mb-1">{p.titulo}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">{p.descripcion}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
