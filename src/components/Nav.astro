@@ -1,0 +1,31 @@
+---
+// src/components/Nav.astro
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 font-bold text-lg text-[#1e40af]">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="6" fill="#1e40af"/>
+        <text x="14" y="19" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="bold">T</text>
+      </svg>
+      TPV Restaurante
+    </a>
+
+    <!-- Links desktop -->
+    <div class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+      <a href="/#funcionalidades" class="hover:text-[#1e40af] transition-colors">Funcionalidades</a>
+      <a href="/#precio" class="hover:text-[#1e40af] transition-colors">Precio</a>
+      <a href="/#contacto" class="hover:text-[#1e40af] transition-colors">Contacto</a>
+    </div>
+
+    <!-- CTA -->
+    <a
+      href="/#contacto"
+      class="bg-[#1e40af] text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#1e3a8a] transition-colors"
+    >
+      Pide una demo gratis
+    </a>
+  </nav>
+</header>
