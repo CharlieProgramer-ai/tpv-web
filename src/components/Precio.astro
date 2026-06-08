@@ -1,0 +1,47 @@
+---
+// src/components/Precio.astro
+const incluidos = [
+  'Carta QR para que el cliente pida desde su móvil',
+  'Reservas online desde internet',
+  'KDS de cocina con aviso sonoro',
+  'Cierre de caja con historial',
+  'Verifactu — cumplimiento fiscal incluido',
+  'Soporte directo con el desarrollador',
+  'Actualizaciones incluidas',
+  'Sin permanencia — cancela cuando quieras',
+];
+---
+
+<section id="precio" class="bg-slate-50 py-20 px-4">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-slate-900 mb-4">Precio claro, sin letra pequeña</h2>
+    <p class="text-slate-500 text-lg mb-10">Un solo precio. Todo incluido. Sin sorpresas.</p>
+
+    <div class="bg-white rounded-3xl border-2 border-[#1e40af] shadow-lg p-8">
+      <div class="mb-2">
+        <span class="text-6xl font-bold text-[#1e40af]">35&nbsp;€</span>
+        <span class="text-slate-500 text-xl">/mes</span>
+      </div>
+      <p class="text-slate-500 text-sm mb-1">+ instalación única: 100-150&nbsp;€ (pago único)</p>
+      <p class="text-slate-400 text-xs mb-8">Precios sin IVA</p>
+
+      <ul class="text-left space-y-3 mb-8">
+        {incluidos.map((item) => (
+          <li class="flex items-start gap-3 text-slate-700 text-sm">
+            <svg class="w-5 h-5 text-[#1e40af] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href="#contacto"
+        class="block w-full bg-[#1e40af] text-white font-semibold text-lg px-8 py-4 rounded-xl hover:bg-[#1e3a8a] transition-colors text-center"
+      >
+        Pide una demo gratuita
+      </a>
+    </div>
+  </div>
+</section>

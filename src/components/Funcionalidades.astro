@@ -1,0 +1,54 @@
+---
+// src/components/Funcionalidades.astro
+const features = [
+  {
+    icono: '📱',
+    titulo: 'Pedidos en tiempo real',
+    descripcion: 'Mesa, barra y cocina sincronizados al instante. Los camareros envían pedidos desde su móvil.',
+  },
+  {
+    icono: '🔲',
+    titulo: 'Carta QR',
+    descripcion: 'El cliente escanea el QR de la mesa y pide desde su móvil. El camarero aprueba cada pedido.',
+  },
+  {
+    icono: '👨‍🍳',
+    titulo: 'KDS de cocina',
+    descripcion: 'Pantalla digital para el cocinero con aviso sonoro al llegar cada pedido. Sin papel, sin confusiones.',
+  },
+  {
+    icono: '📅',
+    titulo: 'Reservas online',
+    descripcion: 'Los clientes reservan 24h desde internet. Tú las ves y gestionas directamente en el TPV.',
+  },
+  {
+    icono: '💰',
+    titulo: 'Cierre de caja',
+    descripcion: 'Cuadre diario automático con historial de efectivo, tarjeta y cobros mixtos. División de cuenta incluida.',
+  },
+  {
+    icono: '🧾',
+    titulo: 'Verifactu incluido',
+    descripcion: 'Cumple la normativa fiscal española desde el primer día. Sin módulos adicionales ni costes extra.',
+  },
+];
+---
+
+<section id="funcionalidades" class="bg-white py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Todo lo que necesita tu restaurante</h2>
+      <p class="text-slate-500 text-lg">Sin módulos extra. Sin letra pequeña. Todo incluido en 35&nbsp;€/mes.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((f) => (
+        <div class="rounded-2xl border border-slate-200 p-6 hover:border-blue-200 hover:shadow-sm transition-all">
+          <div class="text-3xl mb-3">{f.icono}</div>
+          <h3 class="font-semibold text-slate-900 text-lg mb-2">{f.titulo}</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">{f.descripcion}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

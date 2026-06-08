@@ -1,0 +1,39 @@
+---
+// src/components/Problema.astro
+const problemas = [
+  {
+    emoji: '💸',
+    titulo: 'Pagas módulos extra por todo',
+    descripcion: 'La Carta QR, las reservas y el KDS de cocina son extras de pago en la mayoría de TPVs. Con nosotros están incluidos desde el primer día.',
+  },
+  {
+    emoji: '📞',
+    titulo: 'El soporte tarda días',
+    descripcion: 'Cuando algo falla en servicio, necesitas solución inmediata. Hablas con el desarrollador directamente, no con un call center que no conoce tu local.',
+  },
+  {
+    emoji: '📄',
+    titulo: 'Contratos anuales que no puedes cancelar',
+    descripcion: 'La mayoría te ata 12 meses desde el primer día. Nosotros no: pagas mes a mes y cancelas cuando quieras, sin penalizaciones.',
+  },
+];
+---
+
+<section class="bg-slate-50 py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">¿Te suena alguno de estos problemas?</h2>
+      <p class="text-slate-500 text-lg">Los problemas más comunes con el TPV que tienen los restaurantes.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-6">
+      {problemas.map((p) => (
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <div class="text-3xl mb-4">{p.emoji}</div>
+          <h3 class="font-semibold text-slate-900 text-lg mb-2">{p.titulo}</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">{p.descripcion}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
