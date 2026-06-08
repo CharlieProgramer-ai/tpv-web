@@ -4,7 +4,7 @@ interface Props {
   telefono: string; // formato: 34XXXXXXXXX (sin +)
 }
 const { telefono } = Astro.props;
-const mensaje = encodeURIComponent('Hola, me interesa una demo del TPV Restaurante. ¿Podemos hablar?');
+const mensaje = encodeURIComponent('Hola, me interesa una demo del AMJ TPV. ¿Podemos hablar?');
 const url = `https://wa.me/${telefono}?text=${mensaje}`;
 ---
 

@@ -7,7 +7,7 @@ const svg = `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http:/
   <g transform="translate(80, 90)">
     <rect width="64" height="64" rx="14" fill="#1e40af"/>
     <text x="32" y="44" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">T</text>
-    <text x="84" y="42" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e40af">TPV Restaurante</text>
+    <text x="84" y="42" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e40af">AMJ TPV</text>
   </g>
   <text x="80" y="280" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#0f172a">Todo tu restaurante</text>
   <text x="80" y="360" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#0f172a">en un solo TPV</text>
