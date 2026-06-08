@@ -2,33 +2,45 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import Confianza from '../components/Confianza.astro';
 import Funcionalidades from '../components/Funcionalidades.astro';
 import Precio from '../components/Precio.astro';
 import Comparativa from '../components/Comparativa.astro';
+import Faq from '../components/Faq.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout
   title="TPV para restaurantes en Alicante — Desde 35 €/mes | TPV Restaurante"
-  description="Software TPV para restaurantes en Alicante con Carta QR, reservas online y Verifactu incluidos. Sin contratos. Instalación en tu local. Soporte directo."
+  description="Software TPV para restaurantes, bares y arrocerías en Alicante. Carta QR, reservas online y Verifactu incluidos. Instalación presencial y soporte directo. Desde 35 €/mes."
 >
   <Nav />
   <main>
     <Hero ciudad="Alicante" />
 
-    <section class="bg-blue-50 py-10 px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="text-slate-700 text-lg">
-          Ofrecemos instalación y soporte presencial en <strong>Alicante y provincia</strong>.
-          Conocemos la hostelería local y estamos disponibles cuando nos necesites.
+    <section class="bg-blue-50 py-12 px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 text-center">TPV para la hostelería de Alicante</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          De los arroces del paseo marítimo a las cervecerías del centro y las terrazas del Barrio,
+          la hostelería de Alicante vive de la hora punta. Un TPV que se congela cuando el local está
+          a tope te cuesta dinero y clientes. Por eso este sistema funciona en local: cobra y manda
+          comandas a cocina aunque se caiga el WiFi.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Instalo el equipo en tu local de Alicante, configuro tu carta y formo a tu equipo en una
+          mañana. Y si surge un problema un sábado a las diez de la noche, hablas conmigo, no con un
+          call center.
         </p>
       </div>
     </section>
 
+    <Confianza />
     <Funcionalidades />
     <Precio />
     <Comparativa />
+    <Faq ciudad="Alicante" />
     <Contacto />
   </main>
   <Footer />

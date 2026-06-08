@@ -2,33 +2,44 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import Confianza from '../components/Confianza.astro';
 import Funcionalidades from '../components/Funcionalidades.astro';
 import Precio from '../components/Precio.astro';
 import Comparativa from '../components/Comparativa.astro';
+import Faq from '../components/Faq.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout
   title="TPV para restaurantes en Elche — Desde 35 €/mes | TPV Restaurante"
-  description="Software TPV para restaurantes en Elche con Carta QR, reservas online y Verifactu incluidos. Sin contratos. Instalación en tu local. Soporte directo."
+  description="Software TPV para restaurantes, bares y cafeterías en Elche. Carta QR, reservas online y Verifactu incluidos. Instalación a domicilio y soporte directo. Desde 35 €/mes."
 >
   <Nav />
   <main>
     <Hero ciudad="Elche" />
 
-    <section class="bg-blue-50 py-10 px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="text-slate-700 text-lg">
-          Con base en <strong>Elche</strong>, ofrecemos instalación presencial y soporte inmediato
-          para restaurantes, bares y cafeterías de la ciudad.
+    <section class="bg-blue-50 py-12 px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 text-center">Soporte de cerca para los restaurantes de Elche</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Estoy en Elche, así que el soporte no es una promesa por teléfono: si tu bar del centro o
+          tu restaurante de la Glorieta tiene un problema, me acerco. Conozco la hostelería de la
+          ciudad y sé que en plena comida no puedes esperar tres días a que alguien conteste un ticket.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          La instalación es en una mañana: monto el equipo, cargo tu carta, dejo listas las mesas y
+          formo a tus camareros. Esa misma tarde ya estás cobrando con Verifactu y mandando comandas
+          a cocina, con o sin internet.
         </p>
       </div>
     </section>
 
+    <Confianza />
     <Funcionalidades />
     <Precio />
     <Comparativa />
+    <Faq ciudad="Elche" />
     <Contacto />
   </main>
   <Footer />

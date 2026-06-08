@@ -2,33 +2,44 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import Confianza from '../components/Confianza.astro';
 import Funcionalidades from '../components/Funcionalidades.astro';
 import Precio from '../components/Precio.astro';
 import Comparativa from '../components/Comparativa.astro';
+import Faq from '../components/Faq.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout
   title="TPV para restaurantes en Murcia — Desde 35 €/mes | TPV Restaurante"
-  description="Software TPV para restaurantes en Murcia con Carta QR, reservas online y Verifactu incluidos. Sin contratos. Soporte directo."
+  description="Software TPV para restaurantes, tascas y cafeterías en Murcia y su área metropolitana. Carta QR, reservas online y Verifactu incluidos. Soporte directo. Desde 35 €/mes."
 >
   <Nav />
   <main>
     <Hero ciudad="Murcia" />
 
-    <section class="bg-blue-50 py-10 px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="text-slate-700 text-lg">
-          Atendemos restaurantes en <strong>Murcia y área metropolitana</strong>.
-          Instalación a domicilio y soporte directo sin intermediarios.
+    <section class="bg-blue-50 py-12 px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 text-center">Un TPV para las tascas y restaurantes de Murcia</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          La hostelería murciana, de las tascas de tapeo a los restaurantes de mediodía, necesita un
+          TPV rápido que aguante el trasiego del tardeo sin pegarse. Este sistema toma comandas desde
+          el móvil del camarero y las manda a cocina al instante, y si se va internet sigue funcionando
+          sin perder una sola venta.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Doy servicio en Murcia y su área metropolitana: instalación a domicilio, tu carta cargada y
+          tu equipo formado el mismo día. Y soporte directo conmigo, sin intermediarios.
         </p>
       </div>
     </section>
 
+    <Confianza />
     <Funcionalidades />
     <Precio />
     <Comparativa />
+    <Faq ciudad="Murcia" />
     <Contacto />
   </main>
   <Footer />
