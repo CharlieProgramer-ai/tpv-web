@@ -1,0 +1,10 @@
+{
+  "name": "tpv-capture",
+  "private": true,
+  "type": "module",
+  "description": "Herramienta de captura de pantallas y video del TPV para la web de marketing (instancia demo aislada).",
+  "dependencies": {
+    "playwright": "^1.48.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0"
+  }
+}

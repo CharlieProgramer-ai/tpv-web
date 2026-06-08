@@ -1,0 +1,73 @@
+---
+// src/components/Capturas.astro — galería de capturas reales del TPV
+const shots = [
+  {
+    src: '/screenshots/cocina-kds.webp',
+    titulo: 'Pantalla de cocina (KDS)',
+    desc: 'Las comandas llegan a cocina al instante, con las notas de cada plato ("sin cebolla", "poco hecho"). El cocinero marca preparando y listo.',
+    barra: 'Cocina — comandas en tiempo real',
+  },
+  {
+    src: '/screenshots/caja.webp',
+    titulo: 'Caja y cierre del día',
+    desc: 'Total recaudado, desglose de efectivo y tarjeta, pedidos cobrados y arqueo de caja. Cuadra al céntimo.',
+    barra: 'Caja — resumen del turno',
+  },
+  {
+    src: '/screenshots/comanda-notas.webp',
+    titulo: 'Gestión de mesa',
+    desc: 'Cobrar, dividir la cuenta, unir mesas o añadir productos desde un panel táctil pensado para la hora punta.',
+    barra: 'Sala — acciones rápidas de mesa',
+  },
+  {
+    src: '/screenshots/admin.webp',
+    titulo: 'Administración',
+    desc: 'Tu carta, categorías, alérgenos, IVA, empleados y datos fiscales. Todo lo configuras tú, sin depender de nadie.',
+    barra: 'Administración — tu carta y tu negocio',
+  },
+];
+---
+
+<section id="capturas" class="bg-white py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Así se ve por dentro</h2>
+      <p class="text-slate-500 text-lg max-w-2xl mx-auto">No son maquetas: son capturas reales del TPV funcionando. Esto es lo que usarás cada día.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {shots.map((s) => (
+        <div>
+          <div class="rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/60 overflow-hidden bg-white">
+            <div class="flex items-center gap-1.5 px-4 h-8 bg-slate-100 border-b border-slate-200">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+              <span class="ml-2 text-xs text-slate-400 truncate">{s.barra}</span>
+            </div>
+            <img src={s.src} alt={s.titulo} width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-auto block" />
+          </div>
+          <h3 class="font-semibold text-slate-900 text-lg mt-5 mb-1">{s.titulo}</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Carta QR: destacado con marco de móvil -->
+    <div class="mt-16 grid md:grid-cols-2 gap-10 items-center bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
+      <div class="flex justify-center">
+        <div class="rounded-[2rem] border-[6px] border-slate-900 shadow-xl overflow-hidden w-[240px] bg-slate-900">
+          <img src="/screenshots/carta-qr.webp" alt="Carta QR del cliente en el móvil" width="480" height="1039" loading="lazy" decoding="async" class="w-full h-auto block" />
+        </div>
+      </div>
+      <div>
+        <span class="inline-block text-xs font-semibold uppercase tracking-wide text-[#1e40af] bg-blue-50 px-3 py-1 rounded-full mb-4">Carta QR incluida</span>
+        <h3 class="text-2xl font-bold text-slate-900 mb-3">Tus clientes piden desde su móvil</h3>
+        <p class="text-slate-500 leading-relaxed mb-4">
+          El cliente escanea el QR de la mesa, ve tu carta con fotos y precios, y manda el pedido. El camarero lo aprueba y entra directo en cocina. Menos esperas, más rotación de mesas.
+        </p>
+        <p class="text-slate-500 leading-relaxed">Sin apps que descargar, sin comisiones por pedido. Es tuya, va incluida.</p>
+      </div>
+    </div>
+  </div>
+</section>
