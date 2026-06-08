@@ -1,0 +1,27 @@
+---
+// src/pages/404.astro
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Página no encontrada — TPV Restaurante"
+  description="La página que buscas no existe."
+  noindex={true}
+>
+  <Nav />
+  <main class="min-h-[60vh] flex items-center justify-center px-4 py-20">
+    <div class="text-center max-w-md">
+      <div class="text-6xl font-bold text-[#1e40af] mb-4">404</div>
+      <h1 class="text-3xl font-bold text-slate-900 mb-4">Esta página no existe</h1>
+      <p class="text-slate-500 text-lg mb-8">
+        Puede que el enlace esté roto o que la página se haya movido. Vuelve al inicio y sigue desde ahí.
+      </p>
+      <a href="/" class="inline-block bg-[#1e40af] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1e3a8a] transition-colors">
+        ← Volver al inicio
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
