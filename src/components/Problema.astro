@@ -2,38 +2,48 @@
 // src/components/Problema.astro
 const problemas = [
   {
-    emoji: '💸',
-    titulo: 'Pagas módulos extra por todo',
-    descripcion: 'La Carta QR, las reservas y el KDS de cocina son extras de pago en la mayoría de TPVs. Con nosotros están incluidos desde el primer día.',
+    titulo: 'Tu TPV te cobra por funciones que deberían ser estándar',
+    descripcion: 'La Carta QR, las reservas online y el KDS de cocina son básicos hoy en día. Pero la mayoría de TPVs los venden como módulos de pago. Porque saben que los necesitas y no tienes dónde ir.',
+    svg: '<rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>',
   },
   {
-    emoji: '📞',
-    titulo: 'El soporte tarda días',
-    descripcion: 'Cuando algo falla en servicio, necesitas solución inmediata. Hablas con el desarrollador directamente, no con un call center que no conoce tu local.',
+    titulo: 'El sábado a las 9 de la noche el sistema peta. Nadie coge el teléfono.',
+    descripcion: 'Llamas al soporte. Buzón de voz. Ticket abierto para el lunes. Tu equipo apuntando en servilletas mientras la cocina se acumula. Exactamente cuando más lo necesitabas.',
+    svg: '<circle cx="12" cy="12" r="10"/><line x1="4.22" y1="4.22" x2="19.78" y2="19.78"/>',
   },
   {
-    emoji: '📄',
-    titulo: 'Contratos anuales que no puedes cancelar',
-    descripcion: 'La mayoría te ata 12 meses desde el primer día. Nosotros no: pagas mes a mes y cancelas cuando quieras, sin penalizaciones.',
+    titulo: 'Firmaste 12 meses y ahora no puedes salir',
+    descripcion: 'Te metieron un contrato anual desde el primer día. Aunque el sistema falle, aunque el soporte no responda, pagas hasta el último día. Sin excepciones ni devoluciones.',
+    svg: '<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><line x1="12" y1="15" x2="12" y2="17"/>',
   },
 ];
 ---
 
-<section class="bg-slate-50 py-20 px-4">
+<section class="bg-slate-900 py-20 px-4">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-slate-900 mb-4">¿Te suena alguno de estos problemas?</h2>
-      <p class="text-slate-500 text-lg">Los problemas más comunes con el TPV que tienen los restaurantes.</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">¿Te suena alguno de estos?</h2>
+      <p class="text-slate-400 text-lg">Los tres dolores que tienen casi todos los dueños de restaurante con su TPV actual.</p>
     </div>
 
     <div class="grid sm:grid-cols-3 gap-6">
       {problemas.map((p) => (
-        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-2xl mb-4">{p.emoji}</div>
-          <h3 class="font-semibold text-slate-900 text-lg mb-2">{p.titulo}</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">{p.descripcion}</p>
+        <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-red-500/30 transition-colors group">
+          <div class="w-11 h-11 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mb-5 group-hover:bg-red-500/20 transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={p.svg} />
+          </div>
+          <h3 class="font-bold text-white text-base mb-3 leading-snug">{p.titulo}</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">{p.descripcion}</p>
         </div>
       ))}
+    </div>
+
+    <!-- Bridge hacia la solución -->
+    <div class="mt-12 text-center">
+      <p class="text-slate-500 text-base">
+        AMJ TPV existe porque no tenía que ser así.
+        <span class="text-slate-300"> Un TPV completo, a un precio honesto, con soporte de verdad.</span>
+      </p>
     </div>
   </div>
 </section>

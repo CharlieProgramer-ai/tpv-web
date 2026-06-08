@@ -4,12 +4,14 @@
 
 @theme {
   --font-sans: 'Inter Variable', system-ui, -apple-system, sans-serif;
-  --color-primary: #1e40af;
-  --color-primary-dark: #1e3a8a;
-  --color-primary-light: #dbeafe;
-  --color-text: #1e293b;
-  --color-muted: #64748b;
-  --color-border: #e2e8f0;
+  --color-primary: #f59e0b;
+  --color-primary-dark: #d97706;
+  --color-primary-light: #fef3c7;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-border: #334155;
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
 }
 
 html {
@@ -19,4 +21,5 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
+  background-color: #0f172a;
 }
